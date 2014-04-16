@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<groups>
+<group id="0">
+<init comment="false" x="28" y="89">
+<group id="-1"/>
+</init>
+</group>
+<group id="1">
+<step comment="false" x="27" y="262">
+<group id="-1">
+<comment-short comment="false" x="38" y="287">
+<int id="0" val="If not moving, set movement speed to 0."/>
+</comment-short>
+<if comment="false" x="38" y="307">
+<group id="-1">
+<setdx comment="false" x="49" y="350">
+<ACTOR eid="this" id="0"/>
+<int id="1" val="0"/>
+</setdx>
+</group>
+<and comment="false" id="0" x="0" y="0">
+<not comment="false" id="0" x="0" y="0">
+<keydown2new comment="false" id="0" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="2" id="1"/>
+</keydown2new>
+</not>
+<not comment="false" id="1" x="0" y="0">
+<keydown2new comment="false" id="0" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="3" id="1"/>
+</keydown2new>
+</not>
+</and>
+</if>
+<if comment="false" x="38" y="389">
+<group id="-1">
+<setdy comment="false" x="49" y="432">
+<ACTOR eid="this" id="0"/>
+<int id="1" val="0"/>
+</setdy>
+</group>
+<and comment="false" id="0" x="0" y="0">
+<not comment="false" id="0" x="0" y="0">
+<keydown2new comment="false" id="0" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="0" id="1"/>
+</keydown2new>
+</not>
+<not comment="false" id="1" x="0" y="0">
+<keydown2new comment="false" id="0" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="1" id="1"/>
+</keydown2new>
+</not>
+</and>
+</if>
+<comment-short comment="false" x="38" y="471">
+<int id="0" val="If player trying to move diagnally, set 8way to true."/>
+</comment-short>
+<if comment="false" x="38" y="491">
+<group id="-1">
+<set-val-3-1 comment="false" x="49" y="544">
+                            <true comment="false" id="0" x="0" y="0"/>
+                        </set-val-3-1>
+</group>
+<or comment="false" id="0" x="0" y="0">
+<and comment="false" id="0" x="0" y="0">
+<keydown2new comment="false" id="0" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="1" id="1"/>
+</keydown2new>
+<keydown2new comment="false" id="1" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="2" id="1"/>
+</keydown2new>
+</and>
+<and comment="false" id="1" x="0" y="0">
+<keydown2new comment="false" id="0" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="1" id="1"/>
+</keydown2new>
+<keydown2new comment="false" id="1" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="3" id="1"/>
+</keydown2new>
+</and>
+</or>
+</if>
+<else comment="false" x="38" y="581">
+<group id="-1">
+<if comment="false" x="49" y="601">
+<group id="-1">
+<set-val-3-1 comment="false" x="60" y="644">
+                                    <true comment="false" id="0" x="0" y="0"/>
+                                </set-val-3-1>
+</group>
+<or comment="false" id="0" x="0" y="0">
+<and comment="false" id="0" x="0" y="0">
+<keydown2new comment="false" id="0" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="0" id="1"/>
+</keydown2new>
+<keydown2new comment="false" id="1" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="2" id="1"/>
+</keydown2new>
+</and>
+<and comment="false" id="1" x="0" y="0">
+<keydown2new comment="false" id="0" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="0" id="1"/>
+</keydown2new>
+<keydown2new comment="false" id="1" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="3" id="1"/>
+</keydown2new>
+</and>
+</or>
+</if>
+<else comment="false" x="49" y="681">
+<group id="-1">
+<set-val-3-1 comment="false" x="60" y="701">
+                                    <false comment="false" id="0" x="0" y="0"/>
+                                </set-val-3-1>
+</group>
+</else>
+</group>
+</else>
+<comment-short comment="false" x="38" y="750">
+<int id="0" val="Move player"/>
+</comment-short>
+<if comment="false" x="38" y="770">
+<group id="-1">
+<setdx comment="false" x="49" y="808">
+<ACTOR eid="this" id="0"/>
+<int id="1" val="-8"/>
+</setdx>
+</group>
+<and comment="false" id="0" x="0" y="0">
+<keydown2new comment="false" id="0" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="2" id="1"/>
+</keydown2new>
+<not comment="false" id="1" x="0" y="0">
+<get-val-3-1 comment="false" id="0" x="0" y="0"/>
+</not>
+</and>
+</if>
+<if comment="false" x="38" y="847">
+<group id="-1">
+<setdx comment="false" x="49" y="885">
+<ACTOR eid="this" id="0"/>
+<int id="1" val="8"/>
+</setdx>
+</group>
+<and comment="false" id="0" x="0" y="0">
+<keydown2new comment="false" id="0" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="3" id="1"/>
+</keydown2new>
+<not comment="false" id="1" x="0" y="0">
+<get-val-3-1 comment="false" id="0" x="0" y="0"/>
+</not>
+</and>
+</if>
+<if comment="false" x="38" y="924">
+<group id="-1">
+<setdy comment="false" x="49" y="962">
+<ACTOR eid="this" id="0"/>
+<int id="1" val="8"/>
+</setdy>
+</group>
+<and comment="false" id="0" x="0" y="0">
+<keydown2new comment="false" id="0" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="1" id="1"/>
+</keydown2new>
+<not comment="false" id="1" x="0" y="0">
+<get-val-3-1 comment="false" id="0" x="0" y="0"/>
+</not>
+</and>
+</if>
+<if comment="false" x="38" y="1001">
+<group id="-1">
+<setdy comment="false" x="49" y="1039">
+<ACTOR eid="this" id="0"/>
+<int id="1" val="-8"/>
+</setdy>
+</group>
+<and comment="false" id="0" x="0" y="0">
+<keydown2new comment="false" id="0" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="0" id="1"/>
+</keydown2new>
+<not comment="false" id="1" x="0" y="0">
+<get-val-3-1 comment="false" id="0" x="0" y="0"/>
+</not>
+</and>
+</if>
+</group>
+</step>
+</group>
+<group id="2">
+<collide comment="false" x="28" y="147">
+<group id="-1"/>
+</collide>
+</group>
+<group id="3">
+<draw comment="false" x="27" y="204">
+<group id="-1"/>
+</draw>
+</group>
+<group id="5">
+<not comment="false" x="0" y="0">
+<keydown2new comment="false" id="0" x="0" y="0">
+<int id="0" val="0"/>
+<CONTROL eid="3" id="1"/>
+</keydown2new>
+</not>
+</group>
+<group id="-1"/>
+</groups>
